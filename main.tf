@@ -28,7 +28,7 @@ data "kubectl_file_documents" "sync" {
   content = data.flux_sync.main.content
 }
 
-resource "kubernetes_namespace" "flux_system" {
+resource "flux_system" {
   metadata {
     name   = var.namespace
     labels = var.namespace_labels
